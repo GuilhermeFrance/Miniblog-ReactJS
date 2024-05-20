@@ -11,6 +11,8 @@ import About from "./routes/About/About";
 //components
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import Login from "./routes/Login/Login";
+import Register from "./routes/Register/Register";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -19,14 +21,16 @@ function App() {
     <>
       <div className="App">
         <BrowserRouter>
-        <NavBar/>
+          <NavBar />
           <div className="container">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
             </Routes>
           </div>
-          <Footer/>
+          <Footer />
         </BrowserRouter>
       </div>
     </>
